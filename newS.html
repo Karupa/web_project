@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+        
+<html>
+    <head>
+<title>Javascript AutoSubmit Form Example</title>
+<!-- Include CSS File Here-->
+<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css"/>
+<!-- Include JS File Here-->
+<script>
+    
+window.onload = function() {
+// Onload event of Javascript
+// Initializing timer variable
+var x = 10;
+var y = document.getElementById("timer");
+// Display count down for 20s
+setInterval(function() {
+if (x <= 21 && x >= 1) {
+x--;
+y.innerHTML = '' + x + '';
+if (x === 0) {
+//x = 21;
+alert("timeout");
+
+}
+}
+}, 1000);
+// Form Submitting after 20s
+ var auto_refresh = setInterval(function() { submitform();}, 15000);
+ 
+// Form submit function
+function submitform(){
+    alert("submitting");
+     // if(validate()){ // Calling validate function
+     alert("Form is submitting");
+       document.getElementById("form").submit();
+       send.redirect("success.html");
+     
+                     }
+// To validate form fields before submission
+function validate() {
+// Storing Field Values in variables
+alert("validate");
+var name = document.getElementById("name").value;
+var email = document.getElementById("email").value;
+var contact = document.getElementById("contact").value;
+// Regular Expression For Email
+var emailReg='/^([w-.]+@([w-]+.)+[w-]{2,4})?$/';
+// Conditions
+if (name !== '' && email !== '' && contact !== '') {
+if (email.match(emailReg)) {
+if (document.getElementById("male").checked || document.getElementById("female").checked) {
+if (contact.length === 10) {
+return true;
+} else {
+alert("The Contact No. must be at least 10 digit long!");
+return false;
+}
+} else {
+alert("You must select gender.....!");
+return false;
+}
+} else {
+alert("Invalid Email Address...!!!");
+return false;
+}
+} else {
+alert("All fields are required.....!");
+return false;
+}
+}
+};
+    
+    
+    
+</script>
+</head>
+<body>
+<div class="container">
+<div class="main">
+<form action="test2.jsp" method="GET" id="form"  name="form" target="newS.jsp">
+<h2>EXAM</h2>
+<span>Form will automatically submit in <b id="timer">20</b> <b>seconds</b>.</span>
+Qid : <input type="text" name="Aid">
+<label>Question 1:</label>
+<textarea rows="3" cols="50" name="A1"></textarea>
+<label>Question 2: :</label>
+<!--<input type="text" name="email" id="email" placeholder="Valid Email" />-->
+<textarea rows="3" cols="50" name="A2"></textarea>
+<label>Question 3 :</label>
+<textarea rows="3" cols="50" name="A3"></textarea>
+<label>Question 4:</label>
+<textarea rows="3" cols="50" name="A4"></textarea>
+<input type="submit" value="go" onclick="submitform()">
+</form>
+</div>
+</div>
+</body>
+</html>

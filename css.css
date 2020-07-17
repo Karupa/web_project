@@ -1,0 +1,104 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 23 Mar, 2020, 12:06:41 AM
+    Author     : karupa
+*/
+
+
+#toolbar{
+	position:absolute;
+	top:50px;
+	/*bottom:900px;*/
+	}
+#container{
+	margin:10;
+	
+	position:relative;
+	left:900px;
+	padding:10px;
+}
+
+.w3-round-xlarge{border-radius:16px}
+
+.w3-round-large{border-radius:20px;}
+
+.w3-black:hover{	
+	color:#FFF;
+	background-color:#000;
+}
+.w3-btn{
+	border:none;
+	display:inline-block;
+	padding:8px 16px;
+	vertical-align:middle;
+	overflow:hidden;
+	text-decoration:none;
+	text-align:center;
+	cursor:pointer;
+	white-space:nowrap;
+	font-size:15pt;
+	/*color:#a9a9a9;*/
+	}
+.sp1{margin:10 ;}
+.sp2{margin:15;}
+.w3-blue:hover{
+	color:#a9a9a9;
+	background-color:skyblue;}
+
+
+#titlebar{
+	
+	height:23px;
+	width:100%;
+	color:deep skyblue;
+	font:13px ;
+}
+#body_area{
+	position:absolute;
+	top:150px;
+	left:600px;
+	width:120%;
+	font-family: 'Josefin Sans', sans-serif;
+}
+/*@font-face{
+	font-family:hey;
+	src:url(liujianmaocao-regular-webfont.woff);
+}*/
+#login{
+	
+	color:teal;
+	font-size:30pt;
+	width:100%;
+}
+#opt{
+	position:relative;
+	right:120px;
+}
+#bg{
+	background-image:url("a.jpeg");
+	background-size:cover;
+	
+}
+
+#cred{
+	font-size:20pt;
+	font-family:'Josefin Sans';
+	color:#556b2f;
+}
+.bld
+{	 font-style:bold;
+	font-size:25pt;
+	color:darkred;
+	font-family: 'Pacifico', cursive
+}
+#sml{
+	position:absolute;
+	top:200px;
+	left:400px;
+}
+.ft{font-family: 'Pacifico', cursive;}
+	
