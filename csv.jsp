@@ -42,8 +42,8 @@ fw.append(',');
 fw.append("q1");
 fw.append('\n');
 
-//Class.forName(driver).newInstance();
- Class.forName("org.postgresql.Driver").newInstance(); 
+Class.forName(driver).newInstance();
+// Class.forName("org.postgresql.Driver").newInstance(); 
 //connection = DriverManager.getConnection(url+dbName,userName,password);
    connection = DriverManager.getConnection(url+dbName, user, password);
 String query = "select * from ans";
